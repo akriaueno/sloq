@@ -102,11 +102,12 @@ proc printQueryDetail(queryDetail: Querydetail): void =
   echo fmt"ave:  {avg_time}"
   echo fmt"called {called_times} times"
   echo "-------"
+  echo run_explain(queryDetail.query)
+  echo "-------"
 
 printQueryDetail(sorted_queries[sorted_queries.len-1])
 printQueryDetail(sorted_queries[sorted_queries.len-2])
 printQueryDetail(sorted_queries[sorted_queries.len-3])
 printQueryDetail(sorted_queries[0])
 
-echo run_explain("select * from user;")
 close()
