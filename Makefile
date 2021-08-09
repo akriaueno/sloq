@@ -1,12 +1,3 @@
-all: sloq.nim
-	nim c -d:release sloq.nim
-
-compile: sloq.nim
-	nim c sloq.nim
-
-test: compile
-	cat sample.log | ./sloq
-
-clean:
-	$(RM) sloq
+all: src/sloq.nim src/db_con.nim
+	nim c -d:release -o:bin/sloq src/sloq.nim
 
