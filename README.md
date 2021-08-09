@@ -1,7 +1,7 @@
 # sloq
 slow query analyzer
 
-(under development (MYSQL slow query log only))
+(under development (and support only MySQL slow query log))
 
 ## Features
 - Show slow queries.
@@ -12,6 +12,7 @@ slow query analyzer
 `libmysqlclient`
 
 ### Build
+You need to install `nim` to build.([nim official](https://nim-lang.org/))
 ```bash
 sudo apt install default-libmysqlclient-dev
 make
