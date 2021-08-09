@@ -1,7 +1,11 @@
 # sloq
 slow query analyzer
 
-(under development (only MYSQL slow query log))
+(under development (MYSQL slow query log only))
+
+## Features
+- Show slow queries.
+- Connect DBMS and execute `EXPLAIN` for slow queries.
 
 ## Installation
 ### Dependency
