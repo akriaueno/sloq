@@ -108,5 +108,5 @@ printQueryDetail(sorted_queries[sorted_queries.len-2])
 printQueryDetail(sorted_queries[sorted_queries.len-3])
 printQueryDetail(sorted_queries[0])
 
-echo run_explain("aaa")
+echo run_explain("select * from user;")
 close()
