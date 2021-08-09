@@ -20,5 +20,5 @@ make
 
 ## Usage
 ```bash
-cat slow.log | DB_USER=root DB_PASSWORD=password DB_NAME=mysql ./sloq
+cat slow.log | DB_USER=root DB_PASSWORD=password DB_NAME=mysql ./bin/sloq
 ```
