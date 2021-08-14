@@ -27,7 +27,7 @@ func format_result(explain_query: string, col_names: seq[string], explain_result
 
 proc run_explain(query: string): string =
   let
-    select_query_regex = re"SELECT .*"
+    select_query_regex = re"(SELECT|select) .*"
     str_explain_query = fmt"EXPLAIN {query}"
   if query.match(select_query_regex).isNone():
     return ""
