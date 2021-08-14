@@ -89,20 +89,40 @@ queryTable.sort(proc (x, y: (string, Querydetail)): int = cmp(x[1].sum_time, y[1
 let sorted_queries = collect(newSeq):
   for key, val in queryTable.pairs: val
 
+proc color(str:string, color:string): string =
+  let
+    color_table = to_table(
+    {
+      "black": "0",
+      "red": "1",
+      "green": "2",
+      "yellow": "3",
+      "blue": "4",
+      "magenta": "5",
+      "cyan": "6",
+      "white": "7",
+    })
+    begin_esc = "\e["
+    end_esc = "\e[m"
+  return begin_esc & "3" & color_table[color] & "m" & str & end_esc
+
+
 proc printQueryDetail(queryDetail: Querydetail): void =
   let
-    query = "\e[32m" & queryDetail.query & "\e[m"
+    query = color(queryDetail.query, "green")
     sum_time = fmt"{queryDetail.sum_time: 9.5f}"
     sum_time_rate = fmt"{queryDetail.sum_time_rate: 9.5f}"
     avg_time = fmt"{queryDetail.avg_time: 9.5f}"
     called_times = fmt"{queryDetail.times.len: 8}"
+    explain_results = color(run_explain(queryDetail.query), "yellow")
+  echo ">>>>>> Query"
   echo query
   echo fmt"sum:  {sum_time}"
   echo fmt"rate: {sum_time_rate}"
   echo fmt"ave:  {avg_time}"
   echo fmt"called {called_times} times"
-  echo "-------"
-  echo run_explain(queryDetail.query)
+  echo ">>>>>>> Explain"
+  echo explain_results
   echo "-------"
 
 printQueryDetail(sorted_queries[sorted_queries.len-1])
