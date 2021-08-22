@@ -1,2 +1,3 @@
+bin/sloq_debug
 *.log
 !sample.log
