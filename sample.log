@@ -1,0 +1,783 @@
+# Time: 2021-08-14T18:54:55.769687Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000269  Lock_time: 0.000068 Rows_sent: 5  Rows_examined: 5
+SET timestamp=1628967295;
+show databases;
+# Time: 2021-08-14T18:54:55.769815Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000083  Lock_time: 0.000023 Rows_sent: 8  Rows_examined: 8
+SET timestamp=1628967295;
+show tables;
+# Time: 2021-08-14T18:54:55.770090Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000183  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770175Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000018  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770235Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000016  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770353Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000053  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770419Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000017  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770531Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000020  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770632Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000015  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770690Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000015  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967295;
+;
+# Time: 2021-08-14T18:54:55.770786Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000034  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628967295;
+select @@version_comment limit 1;
+# Time: 2021-08-14T18:55:16.622771Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000238  Lock_time: 0.000092 Rows_sent: 8  Rows_examined: 8
+SET timestamp=1628967316;
+show tables;
+# Time: 2021-08-14T18:55:49.178742Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000190  Lock_time: 0.000079 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1628967349;
+select * from departments;
+# Time: 2021-08-14T18:56:29.651834Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.163527  Lock_time: 0.000089 Rows_sent: 300024  Rows_examined: 300024
+SET timestamp=1628967389;
+select * from employees;
+# Time: 2021-08-14T18:57:18.317962Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000144  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628967438;
+select * from information_schema;
+# Time: 2021-08-14T18:58:08.433009Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.004324  Lock_time: 0.004133 Rows_sent: 6  Rows_examined: 6
+SET timestamp=1628967488;
+describe employees;
+# Time: 2021-08-14T18:58:41.758578Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.118379  Lock_time: 0.000103 Rows_sent: 179973  Rows_examined: 300024
+SET timestamp=1628967521;
+select * from employees where gender = 'M';
+# Time: 2021-08-14T18:58:54.089976Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000350  Lock_time: 0.000186 Rows_sent: 6  Rows_examined: 6
+SET timestamp=1628967534;
+describe employees;
+# Time: 2021-08-14T18:59:00.626772Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000391  Lock_time: 0.000215 Rows_sent: 4  Rows_examined: 4
+SET timestamp=1628967540;
+describe salaries;
+# Time: 2021-08-14T19:00:18.832533Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 1.012353  Lock_time: 0.000121 Rows_sent: 1137726  Rows_examined: 1437750
+SET timestamp=1628967618;
+select * from employees
+join salaries
+on employees.emp_no = salaries.emp_no 
+where gender = 'F';
+# Time: 2021-08-14T19:00:36.077219Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.103090  Lock_time: 0.000103 Rows_sent: 120051  Rows_examined: 300024
+SET timestamp=1628967636;
+select * from employees where gender = 'F';
+# Time: 2021-08-14T19:00:53.360954Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000352  Lock_time: 0.000192 Rows_sent: 4  Rows_examined: 4
+SET timestamp=1628967653;
+describe salaries;
+# Time: 2021-08-14T19:01:13.811489Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000202  Lock_time: 0.000078 Rows_sent: 8  Rows_examined: 8
+SET timestamp=1628967673;
+show tables;
+# Time: 2021-08-14T19:01:34.613875Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000325  Lock_time: 0.000172 Rows_sent: 4  Rows_examined: 4
+SET timestamp=1628967694;
+describe titles;
+# Time: 2021-08-14T19:03:03.229655Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 6.357079  Lock_time: 0.000133 Rows_sent: 4638507  Rows_examined: 5381839
+SET timestamp=1628967783;
+select * from employees
+join salaries
+on employees.emp_no = salaries.emp_no
+join titles
+on employees.emp_no = titles.emp_no 
+where salaries.salary > 1000;
+# Time: 2021-08-14T19:03:42.156009Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 6.247179  Lock_time: 0.000147 Rows_sent: 4638507  Rows_examined: 5381839
+SET timestamp=1628967822;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T19:04:39.684069Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 6.216116  Lock_time: 0.000131 Rows_sent: 4638507  Rows_examined: 5381839
+SET timestamp=1628967879;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T19:05:10.690162Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 3.257939  Lock_time: 0.000130 Rows_sent: 166014  Rows_examined: 5381839
+SET timestamp=1628967910;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 100000;
+# Time: 2021-08-14T19:05:28.864277Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 2.790080  Lock_time: 0.000159 Rows_sent: 1853809  Rows_examined: 2331057
+SET timestamp=1628967928;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000 and gender ='F';
+# Time: 2021-08-14T19:08:05.636460Z
+# User@Host: root[root] @ localhost []  Id:    26
+# Query_time: 0.000007  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628968085;
+# administrator command: Quit;
+# Time: 2021-08-14T19:09:16.852752Z
+# User@Host: root[root] @ localhost []  Id:    27
+# Query_time: 0.000064  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628968205;
+explain select * from employees join salarieson employees.emp_no = salaries.emp_nojoin titleson employees.emp_no = titles.emp_nowhere salaries.salary > 1000;
+# Time: 2021-08-14T19:12:53.391956Z
+# User@Host: root[root] @ localhost []  Id:    30
+# Query_time: 0.000401  Lock_time: 0.000206 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968373;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:12:53.392175Z
+# User@Host: root[root] @ localhost []  Id:    30
+# Query_time: 0.000157  Lock_time: 0.000059 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968373;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:13:13.621805Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000310  Lock_time: 0.000139 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968393;
+explain select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:13:55.487338Z
+# User@Host: root[root] @ localhost []  Id:    31
+# Query_time: 0.000313  Lock_time: 0.000171 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968435;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:13:55.487517Z
+# User@Host: root[root] @ localhost []  Id:    31
+# Query_time: 0.000129  Lock_time: 0.000043 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968435;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:14:04.200174Z
+# User@Host: root[root] @ localhost []  Id:    32
+# Query_time: 0.000441  Lock_time: 0.000231 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968444;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:14:04.200412Z
+# User@Host: root[root] @ localhost []  Id:    32
+# Query_time: 0.000179  Lock_time: 0.000064 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968444;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:20:02.820993Z
+# User@Host: root[root] @ localhost []  Id:    33
+# Query_time: 0.000377  Lock_time: 0.000202 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968802;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:20:02.821220Z
+# User@Host: root[root] @ localhost []  Id:    33
+# Query_time: 0.000170  Lock_time: 0.000057 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968802;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:22:31.343821Z
+# User@Host: root[root] @ localhost []  Id:    34
+# Query_time: 0.000285  Lock_time: 0.000126 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968951;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:22:31.344029Z
+# User@Host: root[root] @ localhost []  Id:    34
+# Query_time: 0.000148  Lock_time: 0.000051 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628968951;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:24:07.787436Z
+# User@Host: root[root] @ localhost []  Id:    35
+# Query_time: 0.000367  Lock_time: 0.000204 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969047;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:24:07.787636Z
+# User@Host: root[root] @ localhost []  Id:    35
+# Query_time: 0.000146  Lock_time: 0.000052 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969047;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:25:43.174855Z
+# User@Host: root[root] @ localhost []  Id:    37
+# Query_time: 0.000309  Lock_time: 0.000170 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969143;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:25:43.175040Z
+# User@Host: root[root] @ localhost []  Id:    37
+# Query_time: 0.000116  Lock_time: 0.000041 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969143;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:27:53.583402Z
+# User@Host: root[root] @ localhost []  Id:    38
+# Query_time: 0.000355  Lock_time: 0.000176 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969273;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:27:53.583626Z
+# User@Host: root[root] @ localhost []  Id:    38
+# Query_time: 0.000166  Lock_time: 0.000057 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969273;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:28:22.026553Z
+# User@Host: root[root] @ localhost []  Id:    39
+# Query_time: 0.000378  Lock_time: 0.000184 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969302;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:28:22.026758Z
+# User@Host: root[root] @ localhost []  Id:    39
+# Query_time: 0.000151  Lock_time: 0.000056 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969302;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:28:40.245121Z
+# User@Host: root[root] @ localhost []  Id:    40
+# Query_time: 0.000372  Lock_time: 0.000188 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969320;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:28:40.245328Z
+# User@Host: root[root] @ localhost []  Id:    40
+# Query_time: 0.000154  Lock_time: 0.000055 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969320;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:29:07.769276Z
+# User@Host: root[root] @ localhost []  Id:    41
+# Query_time: 0.000293  Lock_time: 0.000123 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969347;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:29:07.769508Z
+# User@Host: root[root] @ localhost []  Id:    41
+# Query_time: 0.000151  Lock_time: 0.000052 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969347;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:29:11.593224Z
+# User@Host: root[root] @ localhost []  Id:    42
+# Query_time: 0.000328  Lock_time: 0.000148 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969351;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:29:11.593425Z
+# User@Host: root[root] @ localhost []  Id:    42
+# Query_time: 0.000148  Lock_time: 0.000052 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969351;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:30:40.036399Z
+# User@Host: root[root] @ localhost []  Id:    43
+# Query_time: 0.000405  Lock_time: 0.000206 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969440;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:30:40.036623Z
+# User@Host: root[root] @ localhost []  Id:    43
+# Query_time: 0.000166  Lock_time: 0.000059 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969440;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:30:50.149150Z
+# User@Host: root[root] @ localhost []  Id:    44
+# Query_time: 0.000343  Lock_time: 0.000178 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969450;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:30:50.149364Z
+# User@Host: root[root] @ localhost []  Id:    44
+# Query_time: 0.000155  Lock_time: 0.000055 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969450;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:30:50.149578Z
+# User@Host: root[root] @ localhost []  Id:    44
+# Query_time: 0.000147  Lock_time: 0.000049 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969450;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:31:44.812490Z
+# User@Host: root[root] @ localhost []  Id:    45
+# Query_time: 0.000384  Lock_time: 0.000190 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969504;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:31:44.812700Z
+# User@Host: root[root] @ localhost []  Id:    45
+# Query_time: 0.000156  Lock_time: 0.000055 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969504;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T19:31:44.812916Z
+# User@Host: root[root] @ localhost []  Id:    45
+# Query_time: 0.000142  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628969504;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:08:33.219279Z
+# User@Host: root[root] @ localhost []  Id:    46
+# Query_time: 0.000273  Lock_time: 0.000121 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971713;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:08:33.219496Z
+# User@Host: root[root] @ localhost []  Id:    46
+# Query_time: 0.000146  Lock_time: 0.000048 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971713;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:08:33.219698Z
+# User@Host: root[root] @ localhost []  Id:    46
+# Query_time: 0.000136  Lock_time: 0.000046 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971713;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:08:38.596067Z
+# User@Host: root[root] @ localhost []  Id:    47
+# Query_time: 0.000234  Lock_time: 0.000105 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971718;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:08:38.596225Z
+# User@Host: root[root] @ localhost []  Id:    47
+# Query_time: 0.000113  Lock_time: 0.000040 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971718;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:09:51.621454Z
+# User@Host: root[root] @ localhost []  Id:    48
+# Query_time: 0.000277  Lock_time: 0.000122 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971791;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:09:51.621699Z
+# User@Host: root[root] @ localhost []  Id:    48
+# Query_time: 0.000181  Lock_time: 0.000067 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971791;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:23.097326Z
+# User@Host: root[root] @ localhost []  Id:    49
+# Query_time: 0.000255  Lock_time: 0.000114 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971823;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:23.097541Z
+# User@Host: root[root] @ localhost []  Id:    49
+# Query_time: 0.000160  Lock_time: 0.000056 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971823;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:41.098870Z
+# User@Host: root[root] @ localhost []  Id:    50
+# Query_time: 0.000282  Lock_time: 0.000119 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971841;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:41.099117Z
+# User@Host: root[root] @ localhost []  Id:    50
+# Query_time: 0.000183  Lock_time: 0.000062 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971841;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:46.363972Z
+# User@Host: root[root] @ localhost []  Id:    51
+# Query_time: 0.000308  Lock_time: 0.000127 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971846;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:10:46.364215Z
+# User@Host: root[root] @ localhost []  Id:    51
+# Query_time: 0.000184  Lock_time: 0.000065 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971846;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:11:13.919420Z
+# User@Host: root[root] @ localhost []  Id:    52
+# Query_time: 0.000358  Lock_time: 0.000197 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971873;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:11:13.919623Z
+# User@Host: root[root] @ localhost []  Id:    52
+# Query_time: 0.000144  Lock_time: 0.000050 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971873;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:11:18.335879Z
+# User@Host: root[root] @ localhost []  Id:    53
+# Query_time: 0.000271  Lock_time: 0.000118 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971878;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:11:18.336080Z
+# User@Host: root[root] @ localhost []  Id:    53
+# Query_time: 0.000142  Lock_time: 0.000049 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971878;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:00.597025Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000273  Lock_time: 0.000117 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:00.597221Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000141  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:00.598660Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000177  Lock_time: 0.000064 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:00.598840Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000138  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:00.600286Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000173  Lock_time: 0.000061 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:12:00.600458Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000136  Lock_time: 0.000046 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:12:00.601515Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000057  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:12:00.601595Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000029  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971920;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:12:00.601889Z
+# User@Host: root[root] @ localhost []  Id:    54
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971920;
+# administrator command: Quit;
+# Time: 2021-08-14T20:12:17.246927Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000277  Lock_time: 0.000120 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:17.247126Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000143  Lock_time: 0.000049 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:17.247513Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000181  Lock_time: 0.000066 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:17.247694Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000140  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:12:17.248167Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000181  Lock_time: 0.000065 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:12:17.248347Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000140  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:12:17.248635Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000059  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:12:17.248706Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000027  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971937;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:12:17.248786Z
+# User@Host: root[root] @ localhost []  Id:    55
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628971937;
+# administrator command: Quit;
+# Time: 2021-08-14T20:13:33.520197Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000276  Lock_time: 0.000122 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:33.520414Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000147  Lock_time: 0.000050 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:33.520821Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000183  Lock_time: 0.000066 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:33.521021Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000143  Lock_time: 0.000048 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:33.521491Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000141  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:13:33.521654Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000130  Lock_time: 0.000042 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:13:33.521903Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000045  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:13:33.521966Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000029  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972013;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:13:33.522043Z
+# User@Host: root[root] @ localhost []  Id:    56
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972013;
+# administrator command: Quit;
+# Time: 2021-08-14T20:13:58.196167Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000304  Lock_time: 0.000130 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:58.196390Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000167  Lock_time: 0.000056 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:58.196827Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000220  Lock_time: 0.000093 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:58.197022Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000157  Lock_time: 0.000053 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:13:58.197454Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000157  Lock_time: 0.000051 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:13:58.197640Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000151  Lock_time: 0.000048 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:13:58.197869Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000044  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:13:58.197932Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000030  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972038;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:13:58.198068Z
+# User@Host: root[root] @ localhost []  Id:    57
+# Query_time: 0.000007  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972038;
+# administrator command: Quit;
+# Time: 2021-08-14T20:14:30.415444Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000273  Lock_time: 0.000119 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:14:30.415641Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000143  Lock_time: 0.000049 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:14:30.415996Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000138  Lock_time: 0.000047 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:14:30.416154Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000127  Lock_time: 0.000041 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:14:30.416572Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000131  Lock_time: 0.000043 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:14:30.416747Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000145  Lock_time: 0.000041 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:14:30.417059Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000058  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:14:30.417131Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000029  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972070;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:14:30.417214Z
+# User@Host: root[root] @ localhost []  Id:    58
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972070;
+# administrator command: Quit;
+# Time: 2021-08-14T20:15:09.020580Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000281  Lock_time: 0.000119 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:09.020803Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000161  Lock_time: 0.000057 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:09.021132Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000138  Lock_time: 0.000046 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:09.021315Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000135  Lock_time: 0.000044 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:09.021734Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000149  Lock_time: 0.000050 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:09.021914Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000144  Lock_time: 0.000042 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:09.022118Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000046  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:09.022178Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000025  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972109;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:09.022252Z
+# User@Host: root[root] @ localhost []  Id:    59
+# Query_time: 0.000003  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972109;
+# administrator command: Quit;
+# Time: 2021-08-14T20:15:19.309164Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000304  Lock_time: 0.000145 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:19.309398Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000170  Lock_time: 0.000060 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:19.309715Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000163  Lock_time: 0.000054 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:19.309957Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000198  Lock_time: 0.000062 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:19.310425Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000245  Lock_time: 0.000088 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:19.310661Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000175  Lock_time: 0.000060 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:19.310872Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000067  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:19.311001Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000051  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972119;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:19.311053Z
+# User@Host: root[root] @ localhost []  Id:    60
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972119;
+# administrator command: Quit;
+# Time: 2021-08-14T20:15:58.434610Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000322  Lock_time: 0.000130 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:58.434853Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000181  Lock_time: 0.000065 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:58.435241Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000215  Lock_time: 0.000073 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:58.435465Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000176  Lock_time: 0.000060 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 1000;
+# Time: 2021-08-14T20:15:58.435815Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000158  Lock_time: 0.000052 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:58.436021Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000166  Lock_time: 0.000057 Rows_sent: 3  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000;
+# Time: 2021-08-14T20:15:58.436194Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000045  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:58.436256Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000028  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972158;
+EXPLAIN select @@version_comment limit 1;
+# Time: 2021-08-14T20:15:58.436320Z
+# User@Host: root[root] @ localhost []  Id:    61
+# Query_time: 0.000004  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1628972158;
+# administrator command: Quit;
+# Time: 2021-08-14T20:18:06.731984Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 0.000068  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1628972294;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000 and gender ='F';
+# Time: 2021-08-14T20:18:31.481666Z
+# User@Host: root[root] @ localhost []  Id:    25
+# Query_time: 3.907537  Lock_time: 0.000143 Rows_sent: 2784698  Rows_examined: 3350806
+SET timestamp=1628972311;
+select * from employees join salaries on employees.emp_no = salaries.emp_no join titles on employees.emp_no = titles.emp_no  where salaries.salary > 10000 and gender ='M';
