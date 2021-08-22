@@ -56,7 +56,7 @@ while i < lines.len:
         break
       if not line.contains(queryTimeStampRegex):
         queries.add(line)
-    query = queries.join
+    query = queries.join(" ")
     let
       id = getMD5(query)
       timeDetail = Timedetail(query_time: q_time, lock_time: l_time)
